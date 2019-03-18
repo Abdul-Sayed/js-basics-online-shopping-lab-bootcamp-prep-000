@@ -21,11 +21,12 @@ function viewCart() {
   } else {
     let temp = [];
     for (let i = 0; i < cart.length; i += 1) {
-      temp.push(` ${cart[i].itemName} at ${cart[i].itemPrice}`);
+      temp.push(` ${cart[i].itemName} at $${cart[i].itemPrice}`);
     }
     temp[0] = `In your cart, you have${temp[0]}`;
-    temp[(cart.length - 1)] = ` and${temp[(cart.length - 1)]}`;
+    temp[(cart.length - 1)] = ` and${temp[(cart.length - 1)]}.`;
 
+    console.log(temp.toString());
     return (temp.toString());
 
   }
